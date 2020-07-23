@@ -1,62 +1,65 @@
-form.signup,
+.signForm h2{
+  text-align: center;
+}
+.loginForm h2{
+  text-align: center;
+}
 form.login {
   margin-top: 50px;
+  margin-right: 5%;
 }
-
+form.signup {
+  margin-top: 50px;
+  margin-left: 5%;
+}
 button.submit {
   width: 100%;
   background-color: rgb(136, 160, 160);
   border: none;
 }
-
 button.submit:hover {
   background-color: rgb(100, 117, 148);
 }
-
 form#cms {
   margin-top: 20px;
 }
-
 #cms textarea {
   resize: none;
 }
-
 .card-header button.delete,
 button.edit {
   float: right;
   margin: 5px;
 }
-
 .hidden {
   display: none;
 }
-
 #author-name {
   width: 100%;
   height: 35px;
   margin-top: 5px;
 }
-
-
 .jumbotron {
- background-color: blue; 
- color: white
- }
-
- .red-box {
-  float: left;
-  width: 400px;
-  height: 50px;
-  margin: 10px 10px 10px 0;
-  padding: 10px;
-  color: #ffffff;
-  font-size: xx-large; 
-  background-color: #880000; }
-
-  .cmtBox {
-    border-radius: 14px!important;
-    background: #56c0da;
-    box-shadow:  10px 10px 20px rgb(136, 160, 160), 
-                 -10px -10px 20px rgb(100, 117, 148)!important;
+  background-color: rgb(136, 160, 160);
+  color: white;
+}
+.cmtBox {
+  border-radius: 14px !important;
+  background: #56c0da;
+  box-shadow: 10px 10px 20px rgb(136, 160, 160),
+    -10px -10px 20px rgb(100, 117, 148) !important;
+}
+.comments {
+  background-color: white;
+  margin-top: 70px;
+  border: 2px solid gray;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 800px){
+  form.signup {
+    margin: 0;
   }
-
+  form.login{
+    margin: 0;
+  }
+}
