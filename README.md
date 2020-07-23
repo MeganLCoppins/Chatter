@@ -13,10 +13,19 @@ The application orginally called Wild Kards was an application that allowed user
 * [Developer](#Developer)
 
 ## Usage
+
 To use this application simply go to the [deployed link](#Deployed-Link)
 
 ## Demo
 
+Login View
+<img src="./images/login.png" alt="login">
+
+Posts View
+<img src="./images/posts.png" alt="posts">
+
+Comments View
+<img src="./images/comments.png" alt="comments">
 
 
 ## Technologies
