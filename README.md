@@ -44,4 +44,5 @@ https://chatter5.herokuapp.com/
 ## Developer
 
 Megan Coppins
+
 https://github.com/MeganLCoppins/Chatter
