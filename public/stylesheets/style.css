@@ -54,9 +54,9 @@ button.edit {
   background-color: #880000; }
 
   .cmtBox {
-    border-radius: 14px;
+    border-radius: 14px!important;
     background: #56c0da;
     box-shadow:  10px 10px 20px rgb(136, 160, 160), 
-                 -10px -10px 20px rgb(100, 117, 148);
+                 -10px -10px 20px rgb(100, 117, 148)!important;
   }
 

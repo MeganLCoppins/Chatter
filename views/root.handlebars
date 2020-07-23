@@ -1,33 +1,25 @@
-
-
 <head>
   <title>Chatter</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="rel="stylesheet" stylesheets/style.css">
+  <link href="rel=" stylesheet" stylesheets/style.css">
 </head>
 
 <body>
 
   <div class="container">
-    {{!-- <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2 style="text-align: center;">Welcome <span class="member-name"></span></h2>
-      </div>
-    </div> --}}
     <br>
-    <div class="row"> {{!-- justify-content-md-center"> --}}
-      <div class="col-md-6 offset-md-3">   
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
         <form id="cms">
           <div class="form-group">
-            <label for="category"><h4>Create Your Post</h4></label>
-              <textarea placeholder="Title" class="form-control" rows="1" id="title"></textarea>
-
-            {{!-- <div class="form-group"> --}}
+            <label for="category">
+              <h4>Create Your Post</h4>
+            </label>
+            <textarea placeholder="Title" class="form-control" rows="1" id="title" data-id="{{user.id}}"></textarea>
             <textarea placeholder="Post Text" class="form-control" rows="5" id="body"></textarea>
-            {{!-- </div> --}}
             <button type="submit" class="btn btn-success submit">Submit</button>
           </div>
         </form>
@@ -36,13 +28,13 @@
     <br />
     <div class="row row-cols-1 row-cols-md-2">
       {{#each quotes}}
-      <div class="col mb-4">
+      <div class="col mb-4 mt-5">
         <div class="card h-100">
-          <div class="card-body shadow bg-white rounded"> 
+          <div class="card-body bg-white rounded cmtBox">
+            {{!-- <h3>{{member-name}}</h3> --}}
             <p class="card-title"><span style="font-size:x-large">{{ title }}</span></p>
-            <p class="card-text" style="font-weight:bold">{{ body }}</p>
             <p>{{formatDate createdAt}}</p>
-            <a href="/quote/{{id}}">View Comments</a>
+            <a href="/quote/{{id}}">View Post</a>
           </div>
         </div>
       </div>

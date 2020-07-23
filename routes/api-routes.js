@@ -1,7 +1,7 @@
 // Requiring our models and passport as we've configured it
-var db = require("../models");
+const db = require("../models");
 const axios = require("axios");
-var passport = require("../config/passport");
+const passport = require("../config/passport");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -52,7 +52,7 @@ module.exports = function(app) {
 
   // Route for creating a new comment. Pass through the Quote Id the comment refers to, the
   // text of the comment (body) and the UserId.
-  app.post("/api/comment", function(req, res) {
+  app.post("/api/quote/comment", function(req, res) {
     db.Comment.create({
       comment: req.body.comment, //.comment
       UserId: req.user.id, //.id
