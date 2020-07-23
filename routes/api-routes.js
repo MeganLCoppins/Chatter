@@ -31,11 +31,11 @@ module.exports = function(app) {
       });
   });
 
-  // Route for creating a new quote. Pass through the author name (one of the Kards), the
+  // Route for creating a new quote. Pass through the title, the
   // text of the quote (body) and the UserId.
   app.post("/api/quote", function(req, res) {
     db.Quote.create({
-      author: req.body.author,
+      title: req.body.title,
       body: req.body.body,
       UserId: req.user.id
     })
@@ -88,33 +88,4 @@ module.exports = function(app) {
       });
     }
   });
-
-  // app.get("/api/random/kardashian", function(req, res) {
-  //   // set the apikey and limit
-  //   var apikey = process.env.TENOR_API_KEY;
-  //   var lmt = 8;
-
-  //   // test search term
-  //   const kardashians = ["khloe", "kim", "kourtney"];
-  //   var search_term_first =
-  //     kardashians[Math.floor(Math.random() * kardashians.length)];
-  //   var search_term_last = "kardashian";
-  //   var search_term = search_term_first + search_term_last;
-
-  //   // using default locale of en_US
-  //   var search_url =
-  //     "https://api.tenor.com/v1/search?q=" +
-  //     search_term +
-  //     "&key=" +
-  //     apikey +
-  //     "&limit=" +
-  //     lmt;
-
-  //   axios.get(search_url).then(function({ data }) {
-  //     console.log(data);
-  //     var randonNum = Math.floor(Math.random() * data.results.length);
-  //     const img = data.results[randonNum].media[0].gif.url;
-  //     res.send(img);
-  //   });
-  // });
 };

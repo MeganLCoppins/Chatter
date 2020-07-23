@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   const Quote = sequelize.define("Quote", {
-    author: {
-      type: DataTypes.STRING,
+    title: {
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [1]

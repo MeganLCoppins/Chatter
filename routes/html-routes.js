@@ -37,7 +37,7 @@ module.exports = function(app) {
         layout: "loggedin",
         quote: {
           id: dbQuote.id,
-          author: dbQuote.author,
+          title: dbQuote.title,
           body: dbQuote.body
         },
         comments: dbQuote.Comments.map(comment => comment.toJSON())

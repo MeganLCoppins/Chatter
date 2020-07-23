@@ -1,7 +1,7 @@
 
 
 <head>
-  <title>Wild Kards</title>
+  <title>Chatter</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -24,9 +24,10 @@
           <div class="form-group">
             <label for="category"><h4>Create Your Post</h4></label>
               <textarea placeholder="Title" class="form-control" rows="1" id="title"></textarea>
-            <div class="form-group">
+
+            {{!-- <div class="form-group"> --}}
             <textarea placeholder="Post Text" class="form-control" rows="5" id="body"></textarea>
-            </div>
+            {{!-- </div> --}}
             <button type="submit" class="btn btn-success submit">Submit</button>
           </div>
         </form>
@@ -38,7 +39,7 @@
       <div class="col mb-4">
         <div class="card h-100">
           <div class="card-body shadow bg-white rounded"> 
-            <p class="card-title">Quote by <span style="font-size:x-large">{{ author }}</span></p>
+            <p class="card-title"><span style="font-size:x-large">{{ title }}</span></p>
             <p class="card-text" style="font-weight:bold">{{ body }}</p>
             <p>{{formatDate createdAt}}</p>
             <a href="/quote/{{id}}">View Comments</a>
